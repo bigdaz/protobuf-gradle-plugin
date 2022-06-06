@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/gradle-build-action@dd/220-rc2
         with:
           arguments: clean assemble --stacktrace
         
@@ -34,7 +34,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/gradle-build-action@dd/220-rc2
         with:
           arguments: test --tests ${{ matrix.tests }} --stacktrace
 
@@ -47,7 +47,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/gradle-build-action@dd/220-rc2
         with:
           arguments: codenarcMain codenarcTest --continue
       - name: echo codenarcMain reports
